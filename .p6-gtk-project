@@ -1,0 +1,10 @@
+prefix=GVC
+struct-prefix=Gvc
+modules=GVC::Raw::Types
+backups=backup,bitbucket,google-backup,azure-backup,hut
+hfile-prefix=
+lib=gnome-shell
+include-directory=/usr/src/libgnome-volume-control
+subprefixes=
+idir-avail=True
+idir-exclude=.gitlab-ci
