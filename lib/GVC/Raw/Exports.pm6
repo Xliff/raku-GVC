@@ -5,6 +5,5 @@ unit package GVC::Raw::Exports;
 our @gvc-exports is export = <
   GVC::Raw::Definitions
   GVC::Raw::Enums
+  GVC::Raw::Structs
 >;
-
-#GVC::Raw::Structs

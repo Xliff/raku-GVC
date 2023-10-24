@@ -26,7 +26,7 @@ need GIO::Raw::Quarks;
 need GIO::DBus::Raw::Types;
 need GVC::Raw::Definitions;
 need GVC::Raw::Enums;
-#need GVC::Raw::Structs;
+need GVC::Raw::Structs;
 
 BEGIN {
   glib-re-export($_) for |@glib-exports, |@gio-exports, |@gvc-exports;
