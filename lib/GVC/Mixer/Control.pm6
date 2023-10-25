@@ -13,7 +13,7 @@ use GVC::Roles::Signals::MixerControl;
 our subset GvcMixerControlAncestry is export of Mu
   where GvcMixerControl | GObject;
 
-class GVC::Mixer::Conmtrol {
+class GVC::Mixer::Control {
   also does GLib::Roles::Object;
   also does GVC::Roles::Signals::MixerControl;
 
@@ -203,7 +203,11 @@ class GVC::Mixer::Conmtrol {
 
   method get_default_sink ( :$raw = False, :glist(:$gslist) = False )
     is static
-    is also<get-default-sink>
+    is also<
+	    get-default-sink
+	    default_sink
+	    default-sink
+    >
   {
     propReturnObject(
       gvc_mixer_control_get_default_sink($!gmc),
@@ -214,7 +218,11 @@ class GVC::Mixer::Conmtrol {
 
   method get_default_source ( :$raw = False)
     is static
-    is also<get-default-source>
+    is also<
+	    get-default-source
+	    default_source
+	    default-source
+    >
   {
     propReturnObject(
       gvc_mixer_control_get_default_source($!gmc),
