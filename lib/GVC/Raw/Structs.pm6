@@ -38,8 +38,8 @@ class GvcMixerCardPort is repr<CStruct> is export {
 
 	method human_port is also<human-port> {
 		Proxy.new:
-			FETCH => -> $     { $!port      }
-			STORE => -> $, \v { $!port := v }
+			FETCH => -> $     { $!human_port      }
+			STORE => -> $, \v { $!human_port := v }
 	}
 
 	method icon_name is also<icon-name> {
@@ -57,6 +57,24 @@ class GvcMixerCardProfile is repr<CStruct> is export {
 	has guint $.priority      is rw;
 	has guint $.n_sinks       is rw;
 	has guint $.n_sources     is rw;
+
+	method profile {
+		Proxy.new:
+			FETCH => -> $     { $!profile      }
+			STORE => -> $, \v { $!profile := v }
+	}
+
+	method human_profile is also<human-profile> {
+		Proxy.new:
+			FETCH => -> $     { $!human_profile      }
+			STORE => -> $, \v { $!human_profile := v }
+	}
+
+	method status {
+		Proxy.new:
+			FETCH => -> $     { $!status      }
+			STORE => -> $, \v { $!status := v }
+	}
 }
 
 class GvcMixerControl is repr<CStruct> is export {
